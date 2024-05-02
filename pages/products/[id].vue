@@ -1,4 +1,8 @@
 <template>
+    <Head>
+        <Title>Product Details | {{ product.title }}</Title>
+        <Meta name="description" :content="product.description" />
+    </Head>
     <div>
         <ProductDetails :product="product" />
     </div>
@@ -15,7 +19,7 @@
     const { data: product } = await useFetch(uri)
 
     if(!product.value) {
-        throw createError({ statusCode: 404, statusMessage: 'Product not found' })
+        throw createError({ statusCode: 404, statusMessage: 'Product not found', fatal: true })
     }
 
 </script>
