@@ -5,10 +5,16 @@
         <h2>About</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ullam sunt minus consectetur sequi dignissimos reiciendis numquam temporibus, mollitia velit.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro ullam sunt minus consectetur sequi dignissimos reiciendis numquam temporibus, mollitia velit.</p>
+        <div>{{ data }}</div>
     </div>
 </template>
 
 <script setup>
+
+    const { data } = useFetch('/api/about?name=Mahfuz', {
+        method: 'POST',
+        body: { age: 30 }
+    })
 
 </script>
 
