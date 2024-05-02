@@ -11,10 +11,12 @@
 
 <script setup>
 
-    const { data } = useFetch('/api/about?name=Mahfuz', {
-        method: 'POST',
-        body: { age: 30 }
-    })
+    // const { data } = useFetch('/api/about?name=Mahfuz', {
+    //     method: 'POST',
+    //     body: { age: 30 }
+    // })
+
+    const { data } = await useFetch('/api/currency/GBP')
 
 </script>
 
